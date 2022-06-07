@@ -939,6 +939,8 @@ nav {
   bottom: 0;
   color: inherit;
   font-family: inherit;
+  font-size: 2rem;
+  line-height: 1.5;
   display: block;
   position: fixed;
   bottom: 15px;
@@ -1342,6 +1344,15 @@ nav {
             align-items: flex-start;
     -moz-text-align-last: left;
          text-align-last: left;
+  }
+
+  .key-up {
+    bottom: 35px;
+    right: 35px;
+    width: 50px;
+    height: 50px;
+    font-size: 2.5rem;
+    line-height: 1.6;
   }
 }
 
