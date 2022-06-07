@@ -943,7 +943,12 @@ nav {
   position: fixed;
   bottom: 15px;
   right: 15px;
+  width: 40px;
+  height: 40px;
   padding: 5px;
+  font-size: 2rem;
+  line-height: 30px;
+  text-align: center;
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
@@ -954,23 +959,20 @@ nav {
   -o-transition-property: opacity, visibility, transform, background-color, box-shadow;
   transition-property: opacity, visibility, transform, background-color, box-shadow;
   transition-property: opacity, visibility, transform, background-color, box-shadow, -webkit-transform, -webkit-box-shadow;
-  -webkit-transition-duration: 0.2s;
-       -o-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  background-color: #fff;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  color: #fff;
+  background-color: rgba(177, 175, 175, 0.446);
+  -webkit-box-shadow: 0 0 10px #fff;
+          box-shadow: 0 0 10px #fff;
   border-radius: 50%;
   cursor: pointer;
   z-index: 99;
 }
 
-.key-up img {
-  width: 40px;
-  height: 40px;
-}
-
 .key-up:hover {
-  -webkit-box-shadow: 0px 0px 10px 3px #fff;
-          box-shadow: 0px 0px 10px 3px #fff;
+  background-color: rgba(177, 175, 175, 0.868);
 }
 
 .key-up-visible {
@@ -978,7 +980,7 @@ nav {
       -ms-transform: rotate(0);
           transform: rotate(0);
   visibility: visible;
-  opacity: 0.3;
+  opacity: 1;
 }
 
 .latest-work {
