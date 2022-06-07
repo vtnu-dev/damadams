@@ -22,25 +22,28 @@ function burgerMenu() {
 	const menuItems = document.querySelectorAll('.menu__item-link')
 
 	const toogleMenu = () => {
-		if (!menu.classList.contains('active')) {
-			menu.classList.add('active')
-			burger.classList.add('active-burger')
-			body.classList.add('locked')
-         menuItems.forEach(item => {
-            item.addEventListener('click', toogleMenu)
-         })
-		} else {
-			menu.classList.remove('active')
-			burger.classList.remove('active-burger')
-			body.classList.remove('locked')
-		}
+		menu.classList.toggle('active')
+		burger.classList.toggle('active-burger')
+		body.classList.toggle('locked')
 
-      
+      const removeActive = () => {
+         menu.classList.remove('active')
+				burger.classList.remove('active-burger')
+				body.classList.remove('locked')
+      }
+		menuItems.forEach(item => {
+			item.addEventListener('click', removeActive)
+		})
+
+      document.addEventListener('keydown', e => {
+         if (e.keyCode == 27) {
+            // code for kye Escape, but can use e.key
+            removeActive()
+         }
+      })
 	}
 
 	burger.addEventListener('click', toogleMenu)
-
-	
 
 	// Вот тут мы ставим брейкпоинт навбара
 	window.addEventListener('resize', () => {
@@ -83,7 +86,6 @@ const swiper = new Swiper('.swiper', {
 		clickable: true,
 	},
 })
-
 
 // Key UP
 const keyUp = document.querySelector('.key-up')
