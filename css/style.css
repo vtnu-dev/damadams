@@ -1428,7 +1428,7 @@ body {
 }
 
 .contact {
-  padding: 59px 0px 73px 0px;
+  margin: 0px 0px 73px 0px;
 }
 
 .contact__title {
@@ -1868,11 +1868,11 @@ nav {
   font-style: normal;
   font-size: 1.7rem;
   line-height: 1.5882352941;
-  margin: 0px 0px 45px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 .testimonials {
-  margin: 195px 0px 0px 0px;
+  margin: 59px 0px 59px 0px;
   background-color: #F8EEEF;
   padding: 51px 0px;
 }
@@ -2008,7 +2008,7 @@ nav {
   }
 
   .testimonials {
-    padding: 85px 0px 114px 0px;
+    padding: 85px 0px 85px 0px;
   }
 
   .slide__body {
