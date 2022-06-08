@@ -87,19 +87,85 @@ const swiper = new Swiper('.swiper', {
 	},
 })
 
+/*------------------------------------------------*/
+
 // Key UP
-const keyUp = document.querySelector('.key-up')
 
 const handleKeyUp = () => {
+   const keyUp = document.querySelector('.key-up')
 	keyUp.classList.toggle('key-up-visible', window.scrollY > 80)
-}
-const scrollToTop = () => {
-	window.scrollTo({
-		top: 0,
-		behavior: 'smooth',
-	})
+
+   const scrollToTop = () => {
+      window.scrollTo({
+         top: 0,
+         behavior: 'smooth',
+      })
+   }
+   keyUp.addEventListener('click', scrollToTop)
 }
 
 window.addEventListener('scroll', handleKeyUp)
-keyUp.addEventListener('click', scrollToTop)
+
+/*------------------------------------------------*/
+
+//  Num counter
+/*
+window.addEventListener('load', ()=>{
+   const counters = document.querySelectorAll('.counter')
+const counterBox = document.querySelector('.about__stats')
+
+
+const options = {
+	rootMargin: '-250px',
+}
+
+const startCounter = entry => {
+	console.log(entry[0].isIntersecting)
+
+	if (entry[0].isIntersecting) {
+		counters.forEach(counter => {
+			const updateCounter = () => {
+				const finalNumber = counter.getAttribute('data-number')
+				const value = parseInt(counter.textContent)
+
+				const speed = finalNumber / 50
+
+				if (value < finalNumber) {
+					counter.textContent = Math.floor(value + speed)
+					setTimeout(updateCounter, 20)
+				} else {
+					counter.textContent = finalNumber
+				}
+			}
+
+			updateCounter()
+		})
+	}
+}
+
+const observer = new IntersectionObserver(startCounter, options)
+observer.observe(counterBox)
+})
+*/
+
+/*------------------------------------------------*/
+
+// Navbar (show / hidden)
+const navToogle = () => {
+   const nav = document.querySelector('nav');
+
+let prevScrollpos = window.pageYOffset
+
+window.addEventListener('scroll', function () {
+	let currentScrollPos = window.pageYOffset
+	if (prevScrollpos > currentScrollPos || window.scrollY <= 70) {
+		nav.style.top = '0'
+	} else {
+		nav.style.top = '-80px'
+	}
+	prevScrollpos = currentScrollPos
+})
+}
+
+window.addEventListener('scroll', navToogle)
 
