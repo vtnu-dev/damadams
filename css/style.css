@@ -1615,6 +1615,36 @@ body {
   padding: 70px 0px 50px 0px;
 }
 
+.footer a {
+  position: relative;
+  line-height: 1;
+}
+
+.footer a::before {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #f8eeef;
+  border-radius: 55px;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.footer a:hover::before {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
 .footer__body {
   width: 100%;
   display: -webkit-box;
@@ -1660,6 +1690,10 @@ body {
   color: #fff;
 }
 
+.footer__item a img {
+  margin-right: 5px;
+}
+
 .footer__social {
   width: 100%;
   display: -webkit-box;
@@ -1669,11 +1703,32 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 25px 0px 0px 0px;
-  gap: 10px;
+  gap: 20px;
 }
 
 .footer__social a {
-  padding: 5px;
+  padding: 5px 0;
+  position: relative;
+  line-height: 1;
+}
+
+.footer__social a::before {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #f8eeef;
+  border-radius: 55px;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .greeting {
@@ -2405,7 +2460,7 @@ nav {
     background: #fb4f5c;
     left: 0;
     top: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     display: none;
   }
@@ -2416,7 +2471,7 @@ nav {
     display: flex;
     left: 0;
     top: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

@@ -41,6 +41,9 @@ function burgerMenu() {
             removeActive()
          }
       })
+
+      // Прятать меню при повороте экрана
+      window.addEventListener('orientationchange', removeActive)
 	}
 
 	burger.addEventListener('click', toogleMenu)
