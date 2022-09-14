@@ -1,4 +1,5 @@
 # damadams
 https://vtnu-dev.github.io/damadams/
-![image](https://user-images.githubusercontent.com/65651452/190114042-c5e69822-6bc6-409f-b743-d512824cdef5.png)
+
+![image](https://user-images.githubusercontent.com/65651452/190114679-c2297579-59af-40cb-a1fe-5692017fd5b2.png)
 
