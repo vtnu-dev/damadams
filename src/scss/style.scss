@@ -1,0 +1,74 @@
+// Global SCSS-files imports
+@import 'vars';
+@import 'reset';
+@import 'global';
+
+/*================================================================================*/
+// Settings
+@import '_config/variables.scss';
+@import '_config/fonts.scss';
+
+// Mixins
+@import '_mixins/reset.scss';
+@import '_mixins/media.scss';
+@import '_mixins/container.scss';
+@import '_mixins/flex.scss';
+
+/*==============================================================================*/
+// Swiper
+@import './libs/swiper';
+
+/*==============================================================================*/
+
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: $font-family-base;
+	font-weight: $font-weight-base;
+	font-style: $font-style-base;
+	line-height: $line-height-base;
+	font-size: $font-size-base;
+}
+
+// Visual hidden of elements
+.vhidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+// Btn
+.btn {
+	@include reset-button;
+	@include font(2rem, 2.7rem);
+	min-width: 223px;
+	min-height: 65px;
+   @include flex-center-v;
+	border-radius: 18px;
+	background-color: $color-primary;
+	color: $color-accent;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: darken($color: #e05267, $amount: 5%);
+	}
+   &:focus{
+      outline: none;
+      background-color: darken($color: #e05267, $amount: 5%);
+   }
+}
+
+.wrapper {
+	@include wrapper;
+}
+
+@import 'block/*.scss';

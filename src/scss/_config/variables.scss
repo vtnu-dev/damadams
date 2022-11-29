@@ -1,0 +1,21 @@
+// Layout restrictions, container, control points, font, color
+$wrapper-max: 1443px !default;
+$wrapper-min: 280px !default;
+
+//Container
+$container-max-whidths: 1170px;
+$container-padding: 15px;
+
+// Control points
+$breakpoints: (
+	 xs: 0,
+	 sm: 576px,
+	 md: 768px,
+	 lg: 992px,
+	 xl: 1200px,
+	 xxl: 1400px,
+) !default;
+
+
+
+

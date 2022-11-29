@@ -1,0 +1,95 @@
+@import '../_mixins/font-face.scss';
+
+// DMSans
+@include font-face("DM Sans", "../fonts/DMSans/DMSans-Regular", 400);
+@include font-face("DM Sans", "../fonts/DMSans/DMSans-Medium", 500);
+@include font-face("DM Sans", "../fonts/DMSans/DMSans-Bold", 700);
+
+// Nunito
+@include font-face("Nunito", "../fonts/Nunito/Nunito-Regular", 400);
+@include font-face("Nunito", "../fonts/Nunito/Nunito-Medium", 500);
+@include font-face("Nunito", "../fonts/Nunito/Nunito-SemiBold", 600);
+@include font-face("Nunito", "../fonts/Nunito/Nunito-Bold", 700);
+
+// NunitoSans
+@include font-face("Nunito Sans", "../fonts/NunitoSans/NunitoSans-Regular", 400);
+@include font-face("Nunito Sans", "../fonts/NunitoSans/NunitoSans-Bold", 700);
+
+// Poppins
+@include font-face("Poppins", "../fonts/Poppins/Poppins-Regular", 400);
+@include font-face("Poppins", "../fonts/Poppins/Poppins-SemiBold", 600);
+
+// NovaMono
+@include font-face("Nova Mono", "../fonts/NovaMono/NovaMono-Regular", 400);
+
+//Mixins for fonts
+
+// DMSans
+@mixin font-dmsans-regular {
+	font-family: 'DM Sans';
+	font-weight: 400;
+	font-style: normal;
+}
+@mixin font-dmsans-medium {
+	font-family: 'DM Sans', sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+@mixin font-dmsans-bold {
+	 font-family: 'DM Sans', sans-serif;
+	 font-weight: 700;
+	 font-style: normal;
+}
+
+// Nunito
+@mixin font-nunito-regular {
+	 font-family: 'Nunito', sans-serif;
+	 font-weight: 400;
+	 font-style: normal;
+}
+@mixin font-nunito-medium {
+	 font-family: 'Nunito', sans-serif;
+	 font-weight: 500;
+	 font-style: normal;
+}
+@mixin font-nunito-semibold {
+	 font-family: 'Nunito', sans-serif;
+	 font-weight: 600;
+	 font-style: normal;
+}
+@mixin font-nunito-bold {
+	 font-family: 'Nunito', sans-serif;
+	 font-weight: 700;
+	 font-style: normal;
+}
+
+//NunitoSans
+@mixin font-nunitosans-regular {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+@mixin font-nunitosans-bold {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+// Poppins
+@mixin font-poppins-regular {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+@mixin font-poppins-semibold {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+// NovaMono
+@mixin font-novamono-regular {
+	font-family: 'Nova Mono', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}

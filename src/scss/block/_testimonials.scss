@@ -1,0 +1,117 @@
+.testimonials {
+	margin: 59px 0px 59px 0px;
+	background-color: $color-accent;
+	padding: 51px 0px;
+
+	@include media-min(601px) {
+		padding: 85px 0px 85px 0px;
+	}
+}
+
+.slide {
+	display: flex;
+	justify-content: center;
+	&__body {
+		@include flex-center-v;
+		background: #fff url('../img/icons/quotation-mark-icon.svg') no-repeat;
+		background-position: 30px 50px;
+		background-size: 41px 35px;
+		max-width: 726px;
+		border-radius: 60px 0px;
+		padding: 17px 25px 40px 25px;
+
+		@include media-min(601px) {
+			padding: 52px 57px 52px 57px;
+			background-size: 110px 86px;
+		}
+	}
+
+	// .slide__client
+	&__client {
+		@include flex-center-v;
+		width: 154px;
+		height: 162px;
+
+		@include media-min(601px) {
+			width: 206px;
+			height: 180px;
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	// .slide__client-photo
+
+	&__client-photo {
+		width: 74px;
+		height: 74px;
+		border-radius: 50%;
+
+		@include media-min(601px) {
+			width: 104px;
+			height: 104px;
+		}
+	}
+
+	// .slide__client-name
+
+	&__client-name {
+		@include font-poppins-semibold;
+		@include font(1.8rem, 2.6rem);
+		padding: 8px 0px 0px 0px;
+
+		@include media-min(601px) {
+			@include font(2.4rem, 2.6rem);
+			padding: 20px 0px 4px 0px;
+		}
+	}
+
+	// .slide__client-emotion
+
+	&__client-emotion {
+		@include font-poppins-regular;
+		@include font(1.4rem, 2.6rem);
+		color: $color-primary;
+
+		@include media-min(601px) {
+			@include font(1.8rem, 2.6rem);
+		}
+	}
+
+	// .slide__reviews
+
+	&__reviews {
+		text-align: center;
+	}
+
+	// .slide__reviews-feedback
+
+	&__reviews-feedback {
+		@include font-poppins-regular;
+		@include font(1.2rem, 2.6rem);
+		color: #5d616f;
+
+		@include media-min(601px) {
+			@include font(1.8rem, 2.6rem);
+		}
+	}
+
+	// .slide__reviews-rating
+
+	&__reviews-rating {
+		padding: 6px 0px;
+
+		@include media-min(601px) {
+			padding: 12px 0px;
+		}
+	}
+}
+
+.swiper-pagination {
+	&-bullet {
+		background-color: #f01212;
+
+		&-active {
+			background-color: #333333;
+		}
+	}
+}

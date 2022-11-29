@@ -1,0 +1,281 @@
+.about {
+	// .about__body
+
+	&__body {
+		.container {
+			@include flex-center-v;
+			overflow: hidden;
+
+			@include media-min(1020px) {
+				@include flex-center;
+				justify-content: space-between;
+			}
+		}
+	}
+
+	// .about__photo
+
+	&__photo {
+		position: relative;
+		max-width: 320px;
+		max-height: 391px;
+		@include flex-center-v;
+
+		@include media-min(601px) {
+			max-width: 410px;
+			max-height: 502px;
+		}
+	}
+
+	// .about__img
+
+	&__img {
+		max-width: 282px;
+		max-height: 353px;
+		border-radius: 20px;
+		overflow: hidden;
+
+		@include media-min(601px) {
+			max-width: 361px;
+			max-height: 452px;
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		left: 30px;
+		top: 30px;
+		width: 282px;
+		height: 353px;
+		background: url('../img/Triangle-2.png') right bottom / contain no-repeat;
+		z-index: -1;
+
+		@include media-min(601px) {
+			width: 361px;
+			height: 452px;
+		}
+	}
+
+	// .description
+	&__description {
+		@include flex-center-v;
+		max-width: 606px;
+		margin: 67px 0px 0px 0px;
+
+		@include media-min(1020px) {
+			padding: 0px 0px 0px 30px;
+		}
+	}
+
+	.description {
+		@include flex-center-v;
+		max-width: 330px;
+
+		@include media-min(1020px) {
+			max-width: 606px;
+			align-items: flex-start;
+		}
+
+		// .description__title
+
+		&__title {
+			@include font-nunito-bold;
+			@include font(2.8rem, 3.8rem);
+
+			@include media-min(1020px) {
+				@include font(4.8rem, 6.54rem);
+				max-width: 522px;
+			}
+		}
+
+		&__text {
+			@include font(1.8rem, 2.45rem);
+			margin: 16px 0px 47px 0px;
+
+			@include media-min(1020px) {
+				@include font(2.4rem, 3.27rem);
+			}
+		}
+
+		// .description__btn-download
+		&__btns {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 28px;
+
+			@include media-min(1020px) {
+				flex-direction: row;
+			}
+
+			//&-download {
+			//}
+
+			&-portfolio {
+				background-color: #fff;
+				color: $color-primary;
+				border: 1px solid $color-primary;
+				margin: 0px 0px 67px 0px;
+				transition: color 0.3s, background-color 0.3s;
+
+				&:hover {
+					background-color: darken($color: #e05267, $amount: 5%);
+					color: #fff;
+				}
+			}
+		}
+		// .descriotion__programs
+		&__programs {
+			width: 100%;
+		}
+	}
+
+	.programs {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 26px;
+
+		img {
+			margin-right: 15px;
+		}
+
+		@include media-min(1020px) {
+			flex-direction: row;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 14px;
+		}
+
+		&__item {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&-percent {
+				position: absolute;
+				max-width: 272px;
+			}
+
+			&-bar {
+				position: relative;
+				min-width: 210px;
+				@include font(1.4rem, 1.9rem);
+
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0px;
+					bottom: -20px;
+					height: 8px;
+					width: 100%;
+					background-color: #c4c4c4;
+				}
+
+				&::after {
+					content: '';
+					position: absolute;
+					left: 0px;
+					bottom: -20px;
+					height: 8px;
+					background-color: $color-primary;
+				}
+			}
+		}
+	}
+
+	.item-ps {
+		.programs__item-percent {
+			left: 70%-5%;
+		}
+
+		.programs__item-bar {
+			&::after {
+				width: 70%;
+			}
+		}
+	}
+
+	.item-ai {
+		.programs__item-percent {
+			left: 80%-5%;
+		}
+
+		.programs__item-bar {
+			&::after {
+				width: 80%;
+			}
+		}
+	}
+	.item-figma {
+		.programs__item-percent {
+			left: 50%+5%;
+		}
+
+		.programs__item-bar {
+			&::after {
+				width: 50%;
+			}
+		}
+	}
+
+	// .about__stats
+
+	&__stats {
+		margin: 94px 0px 0px 0px;
+		@include flex-center;
+		justify-content: space-evenly;
+		width: 100%;
+		height: 92px;
+		gap: 13px;
+      padding: 0 20px;
+		background-color: $color-accent;
+
+		@include media-min(500px) {
+			height: 144px;
+		}
+		@include media-min(808px) {
+			height: 244px;
+		}
+		@include media-min(1020px) {
+			margin: 216px 0px 0px 0px;
+		}
+	}
+
+	// .about__stats-item
+
+	&__stats-item {
+		text-align: center;
+		@include font-nunito-bold;
+		text-transform: uppercase;
+
+		.counter {
+			@include font(1.2rem, 1.65rem);
+
+			@include media-min(500px) {
+				@include font(1.5rem, 2.65rem);
+			}
+			@include media-min(808px) {
+				@include font(3.8rem, 5.55rem);
+			}
+			@include media-min(1100px) {
+				@include font(4.8rem, 6.55rem);
+			}
+		}
+		.counter-title {
+			@include font(1.1rem, 1.5rem);
+         
+			@include media-min(500px) {
+            @include font(1.5rem, 2.5rem);
+				
+			}
+			@include media-min(808px) {
+				@include font(2.6rem, 3.9rem);
+			}
+			@include media-min(1100px) {
+				@include font(3.6rem, 4.9rem);
+			}
+		}
+	}
+}

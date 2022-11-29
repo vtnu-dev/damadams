@@ -1,0 +1,77 @@
+.greeting {
+   margin: 80px 0px 50px 0px;
+   overflow: hidden;
+	// .greeting__body
+
+	&__body {
+		@include flex-center-v;
+      
+		@include media-min(1020px) {
+			@include flex-center;
+		}
+	}
+
+	// .greeting__photo
+
+	&__photo {
+		width: 100%;
+		@include flex-center-v;
+		background: url('../img/Triangle-1.png') right / contain no-repeat;
+
+		@include media-min(1020px) {
+			order: 2;
+		}
+	}
+
+	&__img {
+		margin: 45px 0px 30px 0px;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+
+
+	// .greeting____description
+
+	&__text  {
+		text-align: center;
+		@include flex-center-v;
+		margin: 57px auto 0px auto;
+		padding: 0px 0px 50px 0px;
+      max-width: 481px;
+
+		@include media-min(1020px) {
+			order: 1;
+			align-items: flex-start;
+			text-align-last: left;
+		}
+	}
+
+	&__hello {
+		@include font(2.8rem, 3.2rem);
+	}
+	// .greeting__title
+	&__title {
+		@include font-nunito-bold;
+		@include font(5rem, 6.8rem);
+
+		@include media-max(495px) {
+			@include font(3rem, 3.8rem);
+		}
+	}
+
+	// .greeting__title-name
+
+	&__title-name {
+		color: $color-primary;
+	}
+
+	&__description {
+		@include font(1.8rem, 2.4rem);
+	}
+
+	// .greeting__btn
+
+	&__btn {
+		margin: 40px 0px 0px 0px;
+	}
+}
